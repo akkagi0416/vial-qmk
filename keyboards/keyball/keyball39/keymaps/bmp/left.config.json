@@ -19,7 +19,7 @@
       "row_pins": [ 20, 19, 18, 17 ],
       "col_pins": [ 7, 8, 9, 10, 11, 12 ]
     },
-    "mode": "SPLIT_SLAVE",
+    "mode": "SPLIT_MASTER",
     "startup": 1,
     "peripheral": {
       "max_interval": 15,

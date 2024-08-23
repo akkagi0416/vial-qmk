@@ -195,8 +195,8 @@ __attribute__((weak)) void keyball_on_apply_motion_to_mouse_scroll(keyball_motio
 
     // apply to mouse report.
 #if KEYBALL_MODEL == 61 || KEYBALL_MODEL == 39 || KEYBALL_MODEL == 147 || KEYBALL_MODEL == 44
-    r->h = -clip2int8(y);
-    r->v = clip2int8(x);
+    r->h = clip2int8(y);
+    r->v = -clip2int8(x);
     if (is_left) {
         r->h = -r->h;
         r->v = -r->v;
@@ -580,6 +580,9 @@ void keyboard_post_init_kb(void) {
         keyball_set_scrollsnap_mode(c.ssnap);
 #endif
     }
+#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+    set_auto_mouse_enable(true); // 自動マウスレイヤーを有効にする
+#endif
 
     keyball_on_adjust_layout(KEYBALL_ADJUST_PENDING);
     keyboard_post_init_user();

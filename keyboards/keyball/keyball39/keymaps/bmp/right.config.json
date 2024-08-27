@@ -24,7 +24,7 @@
     "peripheral": {
       "max_interval": 15,
       "min_interval": 15,
-      "slave_latency": 10
+      "slave_latency": 30
     },
     "central": {
       "max_interval": 30,

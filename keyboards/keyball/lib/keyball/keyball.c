@@ -513,6 +513,11 @@ bool keyball_get_scroll_mode(void) {
 void keyball_set_scroll_mode(bool mode) {
     if (mode != keyball.scroll_mode) {
         keyball.scroll_mode_changed = timer_read32();
+        if (mode) {
+            set_auto_mouse_enable(false);
+        } else {
+            set_auto_mouse_enable(true);
+        }
     }
     keyball.scroll_mode = mode;
 }
@@ -710,7 +715,13 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 
             case SCRL_TO:
                 keyball_set_scroll_mode(!keyball.scroll_mode);
-                break;
+                if (keyball.scroll_mode) {
+                    set_auto_mouse_enable(false);
+                } else {
+                    set_auto_mouse_enable(true);
+                }
+                return false;
+                // break;
             case SCRL_DVI:
                 add_scroll_div(1);
                 break;

@@ -50,6 +50,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     SCRL_MO  , KC_BTN3  , KC_BTN2  , KC_BTN1  , KC_BTN4  ,                            _______  , _______  , _______  , _______  , _______  ,
     SCRL_TO  , _______  , _______  , _______  , _______  , _______  ,      _______  , SCRL_MO  , KBC_SAVE , _______  , _______  , _______
   ),
+
+  [4] = LAYOUT_universal(
+    XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,                            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
+    XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,                            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
+    SCRL_MO  , KC_BTN3  , KC_BTN2  , KC_BTN1  , KC_BTN4  ,                            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
+    SCRL_TO  , _______  , _______  , _______  , _______  , _______  ,      _______  , SCRL_MO  , _______  , _______  , _______  , _______
+  ),
 };
 // clang-format on
 

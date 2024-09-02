@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Configurations
 
 #ifndef KEYBALL_CPI_DEFAULT
-#    define KEYBALL_CPI_DEFAULT 400
+#    define KEYBALL_CPI_DEFAULT 300
 #endif
 
 #ifndef KEYBALL_SCROLL_DIV_DEFAULT
